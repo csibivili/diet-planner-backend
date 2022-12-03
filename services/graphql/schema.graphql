@@ -1,0 +1,22 @@
+schema {
+  query:Query
+  mutation: Mutation
+}
+
+type Recipe {
+  recipeId: ID!
+  instructions: String!
+}
+
+input RecipeInput {
+  recipeId: ID!
+  instructions: String!
+}
+
+type Query {
+  getRecipes: [Recipe]
+}
+
+type Mutation {
+  saveRecipe(recipe: RecipeInput!): Recipe
+}
