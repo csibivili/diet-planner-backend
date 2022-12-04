@@ -24,6 +24,7 @@ export function ApiStack({ stack }: StackContext) {
   // Show the API endpoint in the output
   stack.addOutputs({
     ApiId: api.apiId,
+    ApiKey: api.cdk.graphqlApi.apiKey ?? '',
     APiUrl: api.url,
   })
 

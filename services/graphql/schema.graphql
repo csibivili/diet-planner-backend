@@ -5,11 +5,13 @@ schema {
 
 type Recipe {
   recipeId: ID!
+  title: String!
   instructions: String!
 }
 
 input RecipeInput {
   recipeId: ID!
+  title: String!
   instructions: String!
 }
 

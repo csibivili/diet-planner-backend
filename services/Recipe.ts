@@ -1,5 +1,6 @@
 type Recipe = {
   recipeId: string;
+  title: string;
   instructions: string;
 };
 
