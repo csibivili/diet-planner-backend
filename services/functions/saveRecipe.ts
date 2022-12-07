@@ -4,7 +4,7 @@ import Recipe from '../Recipe'
 
 const dynamoDb = new DynamoDB.DocumentClient()
 
-export default async function createNote(recipe: Recipe): Promise<Recipe> {
+export default async function saveRecipe(recipe: Recipe): Promise<Recipe> {
   const params = {
     Item: recipe as Record<string, unknown>,
     TableName: Table.Recipes.tableName,
