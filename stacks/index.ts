@@ -12,5 +12,9 @@ export default function main(app: App) {
     },
   })
 
-  app.stack(StorageStack).stack(ApiStack).setDefaultRemovalPolicy(RemovalPolicy.DESTROY)
+  if (app.stage !== "prod") {
+    app.setDefaultRemovalPolicy(RemovalPolicy.DESTROY);
+  }
+
+  app.stack(StorageStack).stack(ApiStack);
 }
